@@ -846,17 +846,8 @@ function Library:CreateTab(Name)
 			Title.Text = RefreshTitleText
 			TextBox.PlaceholderText = RefreshPlaceholder
 			FinishedFunction = RefreshFunction
-		end
-		return TextBoxLibrary
-	end
-	
-	
-	return TabLibrary
-end
-
-return Library
-
-Tab1:Label('Label')
+			
+			Tab1:Label('Label')
 Tab1:Button('Button', function()
 end)
 Tab1:Toggle('Toggle', false, function(vu)
@@ -872,3 +863,13 @@ Tab1:Label('Ladel')
 
 local Tab2 = Library:CreateTab('Tab2')
 Tab2:Label('OMG')
+
+		end
+		return TextBoxLibrary
+	end
+	
+	
+	return TabLibrary
+end
+
+return Library
