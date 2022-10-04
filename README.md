@@ -4,9 +4,9 @@ local Library = {}
 
 if not getgenv().Settings then
 	getgenv().Settings = {
-		['Name'] = 'SupBaszz Hub',
+		['Name'] = 'SOME X HUB',
 		['Intro'] = false,
-		['Keybind'] = 'RightControl'
+		['Keybind'] = 'G'
 	}
 end
 
@@ -33,23 +33,6 @@ local function Ripple(Button, x, y)
 	Ripple.Name = "Circle"
 	Ripple.Parent = Button
 	Ripple.BackgroundTransparency = 1
-	
-	Tab1:Label('Label')
-Tab1:Button('Button', function()
-end)
-Tab1:Toggle('Toggle', false, function(vu)
-_G.Toggle = vu
-end)
-Tab1:TextBox('Textbox','Wow', function(output)
-print(output)
-end)
-Tab1:Dropdown('Dropdown', {'1', '2', 3}, function(output)
-print(output)
-end)
-Tab1:Label('Ladel')
-
-local Tab2 = Library:CreateTab('Tab2')
-Tab2:Label('OMG')
 	Ripple.AnchorPoint = Vector2.new(0.5, 0.5)
 	Ripple.Position = UDim2.new(0,x - Button.AbsolutePosition.X, 0, y - Button.AbsolutePosition.Y - 36)
 	Ripple.Image = "rbxassetid://3570695787"
@@ -872,3 +855,20 @@ function Library:CreateTab(Name)
 end
 
 return Library
+
+Tab1:Label('Label')
+Tab1:Button('Button', function()
+end)
+Tab1:Toggle('Toggle', false, function(vu)
+_G.Toggle = vu
+end)
+Tab1:TextBox('Textbox','Wow', function(output)
+print(output)
+end)
+Tab1:Dropdown('Dropdown', {'1', '2', 3}, function(output)
+print(output)
+end)
+Tab1:Label('Ladel')
+
+local Tab2 = Library:CreateTab('Tab2')
+Tab2:Label('OMG')
