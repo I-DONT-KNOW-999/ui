@@ -4,9 +4,9 @@ local Library = {}
 
 if not getgenv().Settings then
 	getgenv().Settings = {
-		['Name'] = 'SOME X HUB',
+		['Name'] = 'SupBaszz Hub',
 		['Intro'] = false,
-		['Keybind'] = 'G'
+		['Keybind'] = 'RightControl'
 	}
 end
 
@@ -846,24 +846,6 @@ function Library:CreateTab(Name)
 			Title.Text = RefreshTitleText
 			TextBox.PlaceholderText = RefreshPlaceholder
 			FinishedFunction = RefreshFunction
-			
-			Tab1:Label('Label')
-Tab1:Button('Button', function()
-end)
-Tab1:Toggle('Toggle', false, function(vu)
-_G.Toggle = vu
-end)
-Tab1:TextBox('Textbox','Wow', function(output)
-print(output)
-end)
-Tab1:Dropdown('Dropdown', {'1', '2', 3}, function(output)
-print(output)
-end)
-Tab1:Label('Ladel')
-
-local Tab2 = Library:CreateTab('Tab2')
-Tab2:Label('OMG')
-
 		end
 		return TextBoxLibrary
 	end
